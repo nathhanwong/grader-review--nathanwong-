@@ -24,7 +24,7 @@ if [ $? -ne 0 ]; then
     exit 1  
 fi
 
-test_output=$(java -cp "$CPATH" org.junit.runner.JUnitCore YourTestClass)
+test_output=$(java -cp "$CPATH" org.junit.runner.JUnitCore TestListExamples.java)
 
 
 if echo "$test_output" | grep -q "OK"; then
@@ -32,9 +32,6 @@ if echo "$test_output" | grep -q "OK"; then
 else
     echo "Tests failed. Student's code is not functioning correctly."
 fi
-
-
-
 
 
 
